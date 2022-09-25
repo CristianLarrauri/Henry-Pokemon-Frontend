@@ -1,0 +1,32 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 2%;
+}
+
+.NavBar-home {
+  width: 88px;
+  height: 38px;
+}
+
+.NavBar-create {
+  width: 38px;
+  height: 38px;
+}
+
+.NavBar img:hover {
+  transform: scale(1.2);
+}
+
+button,
+select {
+  border-color: #2774ba;
+  border-radius: 10%;
+  justify-content: space-between;
+}
+input {
+  border-color: #2774ba;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}

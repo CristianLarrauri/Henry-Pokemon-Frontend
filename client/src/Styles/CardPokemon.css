@@ -1,0 +1,24 @@
+img {
+  width: 40%;
+  height: 40%;
+  margin-top: 3%;
+}
+
+.CardsPokemonsConteiner {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.CardPokemon {
+  background-color: #c8a102;
+  border: #2774ba solid 4px;
+  margin: 7px;
+  border-radius: 3%;
+  width: 20%;
+  box-shadow: 0 1.5rem 4rem;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}

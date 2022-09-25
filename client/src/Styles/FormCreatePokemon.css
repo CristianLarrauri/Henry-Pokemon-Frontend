@@ -1,0 +1,34 @@
+.FormCreatePokemon-container {
+  justify-content: space-around;
+  display: flex;
+  margin: 5%;
+}
+.FormCreatePokemon {
+  background-color: #c8a102;
+  border: #2774ba solid 4px;
+  border-radius: 2.5%;
+  margin: 5% 1%;
+  box-shadow: 0 1.5rem 4rem;
+  text-align: center;
+  height: 450px;
+  width: 350px;
+}
+
+.FormCreatePokemon-skills,
+.FormCreatePokemon-types {
+  display: flex;
+  justify-content: space-around;
+}
+
+button,
+select {
+  border-color: #2774ba;
+  border-radius: 10%;
+}
+input {
+  text-align: center;
+  border-color: #2774ba;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}
