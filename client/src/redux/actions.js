@@ -54,7 +54,7 @@ export const getPokemonName = (name) => {
 
 export const getPokemonDetail = (id) => {
   return async (dispatch) => {
-    let info = await axios.get(`http://localhost:3001/pokemons/prueba`);
+    let info = await axios.get(`http://localhost:3001/pokemons/${id}`);
     dispatch({ type: GET_POKEMON_DETAIL, payload: info.data });
   };
 };

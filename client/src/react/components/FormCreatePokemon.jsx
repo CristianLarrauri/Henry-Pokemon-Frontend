@@ -60,7 +60,7 @@ const FormCreatePokemon = () => {
     if (!input.weight || input.weight < 0) {
       error.weight = "Weight invalido";
     }
-    if (!input.types || input.types.length < 1) {
+    if (!input.types || input.types.length === 0) {
       error.types = "Types invalido";
     }
 

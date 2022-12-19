@@ -82,7 +82,7 @@ router.get("/", async (req, res) => {
 //.........................................................................................//
 //  GET /pokemons/{idPokemon} --> FUNCIONANDO
 
-router.get("/", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     let { id } = req.params;
     let info = await getDbInfo();
