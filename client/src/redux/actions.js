@@ -21,7 +21,7 @@ export const POWER_FILTER = "POWER_FILTER";
 export const getPokemons = (page, property, order, api, filtertype) => {
   return async (dispatch) => {
     let info = await axios.get(
-      `http://localhost:3001/pokemons?page=${page}&property=${property}&order=${order}&api=${api}&filtertype=${filtertype}`
+      `/pokemons?page=${page}&property=${property}&order=${order}&api=${api}&filtertype=${filtertype}`
     );
 
     dispatch({ type: GET_POKEMONS, payload: info.data });
@@ -32,7 +32,7 @@ export const getPokemons = (page, property, order, api, filtertype) => {
 // export const getPokemons = (page, property, order, api, filtertype) => {
 //   return async (dispatch) => {
 //     return fetch(
-//       `http://localhost:3001/pokemons?page=${page}&property=${property}&order=${order}&api=${api}&filtertype=${filtertype}`
+//       `/pokemons?page=${page}&property=${property}&order=${order}&api=${api}&filtertype=${filtertype}`
 //     )
 //       .then((pepe) => pepe.json())
 //       .then((tuki) => dispatch({ type: GET_POKEMONS, payload: tuki }));
@@ -44,7 +44,7 @@ export const getPokemons = (page, property, order, api, filtertype) => {
 
 export const getPokemonName = (name) => {
   return async (dispatch) => {
-    let info = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
+    let info = await axios.get(`/pokemons?name=${name}`);
     dispatch({ type: GET_POKEMON_NAME, payload: info.data });
   };
 };
@@ -54,7 +54,7 @@ export const getPokemonName = (name) => {
 
 export const getPokemonDetail = (id) => {
   return async (dispatch) => {
-    let info = await axios.get(`http://localhost:3001/pokemons/${id}`);
+    let info = await axios.get(`/pokemons/${id}`);
     dispatch({ type: GET_POKEMON_DETAIL, payload: info.data });
   };
 };
@@ -64,7 +64,7 @@ export const getPokemonDetail = (id) => {
 
 export const getTypes = () => {
   return async (dispatch) => {
-    let info = await axios.get("http://localhost:3001/types");
+    let info = await axios.get("/types");
     dispatch({ type: GET_TYPES, payload: info.data });
   };
 };
@@ -74,7 +74,7 @@ export const getTypes = () => {
 
 export const createPokemon = (payload) => {
   return async () => {
-    let info = await axios.post("http://localhost:3001/pokemons", payload);
+    let info = await axios.post("/pokemons", payload);
     return info;
   };
 };
@@ -84,7 +84,7 @@ export const createPokemon = (payload) => {
 
 export const getPokemonFilter = () => {
   return async (dispatch) => {
-    let info = await axios.get(`http://localhost:3001/filter`);
+    let info = await axios.get(`/filter`);
     dispatch({ type: GET_POKEMON_FILTER, payload: info.data });
   };
 };
@@ -95,20 +95,3 @@ export const powerFilter = (payload) => {
     payload: payload,
   };
 };
-
-// export const filterTypes = (payload) => {
-//   return {
-//     type: FILTER_TYPES,
-//     payload,
-//   };
-// };
-
-// export const filterApi = (payload) => {
-//   return {
-//     type: FILTER_API,
-//     payload,
-//   };
-// };
-
-//.........................................................................................//
-// ORDER
